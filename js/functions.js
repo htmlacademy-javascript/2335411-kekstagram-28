@@ -1,37 +1,27 @@
-//Функция проверки длины строки
-const getCount = (string, length) => {
-  if (string.length <= length) {
-    return true;
-  } else {
-    return false;
-  }
-};
+const getCount = (string, length) => string.length <= length;
 
 
-// Функция проверки палиндрома
 const isPalindrome = (string) => {
   const tempString = string.toLowerCase().replaceAll(' ', '');
   let reverseString = '';
   for (let i = tempString.length - 1; i >= 0; i--) {
-    reverseString += tempString.at(i);
+    reverseString += tempString[i];
   }
   return tempString === reverseString;
 };
 
 
-// Функция извлекает цифры из строки
-const getNum = (string) => {
+const extractNumber = (string) => {
   let result = '';
   for (let i = 0; i < string.length; i++) {
-    if (!Number.isNaN(parseInt(string.at(i), 10))) {
-      result += string.at(i);
+    if (!Number.isNaN(parseInt(string[i], 10))) {
+      result += string[i];
     }
   }
-  return parseInt(result, 10);
+  return +result;
 };
 
 
-// Функция принимает три параметра
 const getPadStart = (string, minLength, pad) => {
   const actualPad = minLength - string.length;
   if (actualPad <= 0) {
@@ -39,3 +29,5 @@ const getPadStart = (string, minLength, pad) => {
   }
   return pad.slice(0, actualPad % pad.length) + pad.repeat(actualPad / pad.length) + string;
 };
+
+
