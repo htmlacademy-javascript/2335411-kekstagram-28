@@ -40,7 +40,7 @@ function createRandomId (a, b) {
 
   return function () {
     let currentValue = getRandomInteger(a, b);
-    if (previousValues.length >= (a - b + 1)) {
+    if (previousValues.length >= (b - a + 1)) {
       return null;
     }
 
@@ -75,5 +75,5 @@ const createArrayPhotos = () => Array.from(
   { length: 25 },
   createPhotos
 );
-createArrayPhotos();
+console.log(createArrayPhotos());
 
