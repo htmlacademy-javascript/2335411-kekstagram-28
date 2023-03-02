@@ -75,5 +75,5 @@ const createArrayPhotos = () => Array.from(
   { length: 25 },
   createPhotos
 );
-console.log(createArrayPhotos());
+createArrayPhotos();
 
