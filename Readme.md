@@ -1,6 +1,6 @@
 # Личный проект «Кекстаграм»
 
-* Студент: [Павел](https://up.htmlacademy.ru/javascript/28/user/2335411).
+* Студент: [Павел Вербицкий](https://up.htmlacademy.ru/javascript/28/user/2335411).
 * Наставник: [Николай Усов](https://htmlacademy.ru/profile/id1493681).
 
 ---
