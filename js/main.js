@@ -1,9 +1,6 @@
-import {AVATAR_MAX_COUNT, LIKES_MIN_COUNT, LIKES_MAX_COUNT, COMMENTS_MAX_COUNT, URL_MAX_COUNT, NAMES, DESCRIPTIONS, MESSAGES} from './data.js';
-import {getRandomInteger, getRandomArrayElement,createRandomId, createdIdGenerator} from './util.js';
-
-const generatePhotoId = createdIdGenerator();
-const generateCommentId = createRandomId(1, URL_MAX_COUNT);
-const generateRandomId = createdIdGenerator();
+import {AVATAR_MAX_COUNT, LIKES_MIN_COUNT, LIKES_MAX_COUNT, COMMENTS_MAX_COUNT, NAMES, DESCRIPTIONS, MESSAGES} from './constants.js';
+import {getRandomInteger, getRandomArrayElement, } from './util.js';
+import {generatePhotoId, generateCommentId, generateRandomId} from './moks.js';
 
 const createComments = () => ({
   id: generateCommentId (),
