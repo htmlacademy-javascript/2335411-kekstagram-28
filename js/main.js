@@ -1,25 +1,7 @@
-import {AVATAR_MAX_COUNT, LIKES_MIN_COUNT, LIKES_MAX_COUNT, COMMENTS_MAX_COUNT, NAMES, DESCRIPTIONS, MESSAGES} from './constants.js';
-import {getRandomInteger, getRandomArrayElement, } from './util.js';
-import {generatePhotoId, generateCommentId, generateRandomId} from './moks.js';
-
-const createComments = () => ({
-  id: generateCommentId (),
-  avatar: `img/avatar-${getRandomInteger(1, AVATAR_MAX_COUNT)}.svg`,
-  message: getRandomArrayElement(MESSAGES) ,
-  name: getRandomArrayElement(NAMES)
-});
-
-const createPhotos = () => ({
-  id: generateRandomId (),
-  url: `photos/${generatePhotoId()}.jpg`,
-  description: getRandomArrayElement (DESCRIPTIONS),
-  likes: getRandomInteger(LIKES_MIN_COUNT, LIKES_MAX_COUNT),
-  comments: Array.from({ length: getRandomInteger(0, COMMENTS_MAX_COUNT) }, createComments),
-});
+import {createPhotos} from './moks.js';
 
 const createArrayPhotos = () => Array.from(
   { length: 25 },
   createPhotos
 );
 createArrayPhotos();
-
