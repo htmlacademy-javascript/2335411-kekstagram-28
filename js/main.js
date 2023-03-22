@@ -2,4 +2,5 @@ import {createArrayPhotos} from './moks.js';
 import {drawThumbnails} from './thumbnails.js';
 
 
-drawThumbnails(createArrayPhotos());
+const drawArrayThumbnails = drawThumbnails(createArrayPhotos());
+drawArrayThumbnails();
