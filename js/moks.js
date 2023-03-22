@@ -21,4 +21,8 @@ const createPhotos = () => ({
   comments: Array.from({ length: getRandomInteger(0, COMMENTS_MAX_COUNT) }, createComments),
 });
 
-export {generateCommentId, generatePhotoId, generateRandomId, createPhotos};
+const createArrayPhotos = () => Array.from(
+  { length: 25 },
+  createPhotos
+);
+export {generateCommentId, generatePhotoId, generateRandomId, createPhotos, createArrayPhotos};

@@ -1,7 +1,5 @@
-import {createPhotos} from './moks.js';
+import {createArrayPhotos} from './moks.js';
+import {drawThumbnails} from './thumbnails.js';
 
-const createArrayPhotos = () => Array.from(
-  { length: 25 },
-  createPhotos
-);
-createArrayPhotos();
+
+drawThumbnails(createArrayPhotos());
