@@ -25,4 +25,5 @@ const createArrayPhotos = () => Array.from(
   { length: URL_MAX_COUNT },
   createPhotos
 );
+
 export {generateCommentId, generatePhotoId, generateRandomId, createPhotos, createArrayPhotos};
