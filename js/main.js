@@ -1,2 +1,2 @@
-import './full-size.js';
+import './big-picture.js';
 import './form.js';
