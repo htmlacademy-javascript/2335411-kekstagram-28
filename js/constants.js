@@ -5,7 +5,7 @@ const COMMENTS_MAX_COUNT = 10;
 const URL_MAX_COUNT = 25;
 const HASHTAG_REZ_CHECK = /^#[a-zа-яё0-9]{1,19}$/i;
 const HASHTAG_MAX_COUNT = 5;
-const HASHTAG_ERROR_MESSAGE = 'Ошибка! Проверьте правильность введенных данных';
+const HASHTAG_ERROR_MESSAGE = 'Введите не более 5 хештегов. Каждый должен начинаться с символа # и может содержать буквы или числа.';
 const NAMES = [
   'Андрей',
   'Михаил',
