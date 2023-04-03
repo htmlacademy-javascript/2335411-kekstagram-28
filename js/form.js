@@ -1,6 +1,7 @@
 import {HASHTAG_ERROR_MESSAGE, HASHTAG_MAX_COUNT,HASHTAG_REZ_CHECK} from './constants.js';
 import {isEscapeKey} from './util.js';
 import { addScale, resetScale } from './scale.js';
+import { addFilters, removeFilters } from './effects.js';
 
 const formModal = document.querySelector('.img-upload__overlay');
 const form = document.querySelector('.img-upload__form');
@@ -33,6 +34,7 @@ function hideModal () {
   document.body.classList.remove('modal-open');
   document.removeEventListener('keydown', onDocumentKeydown);
   resetScale();
+  removeFilters();
 }
 
 const isValidHashtag = (hashtag) => HASHTAG_REZ_CHECK.test(hashtag);
@@ -70,6 +72,7 @@ const showModal = () => {
   document.body.classList.add('modal-open');
   document.addEventListener('keydown', onDocumentKeydown);
   addScale();
+  addFilters();
 };
 
 form.addEventListener('submit', handleFormSubmit);
