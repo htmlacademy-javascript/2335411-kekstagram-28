@@ -1,3 +1,6 @@
 import './big-picture.js';
-import { onUploadButton } from './form.js';
-onUploadButton();
+import { getData } from './api.js';
+import { clickOnUpload } from './form.js';
+
+getData();
+clickOnUpload();
