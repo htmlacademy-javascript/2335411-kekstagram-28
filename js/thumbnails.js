@@ -29,4 +29,4 @@ const drawThumbnails = (pictures) => {
 const renderPhoto = createArrayPhotos();
 drawThumbnails(renderPhoto);
 
-export{renderPhoto, photosContainer};
+export{renderPhoto, photosContainer, drawThumbnails};
